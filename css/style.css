@@ -3,6 +3,12 @@
     --bs-primary-rgb: 8, 59, 76;
     --bs-secondary: #1389b2;
     --bs-secondary-rgb: 19, 137, 178;
+    --bs-danger: #f0466f;
+    --bs-danger-rgb: 240, 70, 111;
+    --bs-success: #0cd6a1;
+    --bs-success-rgb: 12, 214, 161;
+    --bs-warning: #ffd166;
+    --bs-warning-rgb: 255, 209, 102;
 }
 
 main h1 {

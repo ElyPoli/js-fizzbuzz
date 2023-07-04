@@ -9,10 +9,7 @@ Crea un container nel DOM , aggiungendo (attraverso la funzione `append()`) un e
 
 **BONUS 2:**
 Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
-Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
-
-const ul = document.querySelector("ul.list");
 
 // Ciclo per stampare i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
@@ -24,23 +21,29 @@ for (let i = 1; i <= 100; i++) {
 
     // Verifico i numeri multipli di 3 o 5 oppure di entrambi
     if (i % 3 === 0 && i % 5 === 0) {
-        console.log("fizzbuzz");
         colLabel = "fizzbuzz";
     } else if (i % 3 === 0) {
-        console.log("fizz");
         colLabel = "fizz";
     } else if (i % 5 === 0) {
-        console.log("buzz");
         colLabel = "buzz";
     } else {
-        console.log(i);
         colLabel = i;
     }
 
     //Aggiungo gli elementi al dom
-    col.classList.add("col-4", "col-sm-3", "col-md-2", "bg-secondary", "me-3", "ms-3", "single-col", "rounded-4", "d-flex", "justify-content-center", "align-items-center", "shadow", "fs-3", "fw-bold");
+    col.classList.add("col-4", "col-sm-3", "col-md-2", "me-3", "ms-3", "single-col", "rounded-4", "d-flex", "justify-content-center", "align-items-center", "shadow", "fs-3", "fw-bold");
+
+    //Modifico i colori di sfondo
+    if (i % 3 === 0 && i % 5 === 0) {
+        col.classList.add("bg-danger");
+    } else if (i % 3 === 0) {
+        col.classList.add("bg-success");
+    } else if (i % 5 === 0) {
+        col.classList.add("bg-warning");
+    } else {
+        col.classList.add("bg-secondary");
+    }
 
     col.append(colLabel);
     row.append(col);
-
 }
