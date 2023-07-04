@@ -19,31 +19,25 @@ for (let i = 1; i <= 100; i++) {
     const col = document.createElement("div");
     let colLabel;
 
-    // Verifico i numeri multipli di 3 o 5 oppure di entrambi
+    // Verifico i numeri multipli di 3 o 5 oppure di entrambi e modifico lo sfondo
     if (i % 3 === 0 && i % 5 === 0) {
-        colLabel = "fizzbuzz";
-    } else if (i % 3 === 0) {
-        colLabel = "fizz";
-    } else if (i % 5 === 0) {
-        colLabel = "buzz";
-    } else {
-        colLabel = i;
-    }
-
-    //Aggiungo gli elementi al dom
-    col.classList.add("col-4", "col-sm-3", "col-md-2", "me-3", "ms-3", "single-col", "rounded-4", "d-flex", "justify-content-center", "align-items-center", "shadow", "fs-3", "fw-bold");
-
-    //Modifico i colori di sfondo
-    if (i % 3 === 0 && i % 5 === 0) {
+        colLabel = "FizzBuzz";
         col.classList.add("bg-danger");
     } else if (i % 3 === 0) {
+        colLabel = "Fizz";
         col.classList.add("bg-success");
     } else if (i % 5 === 0) {
+        colLabel = "Buzz";
         col.classList.add("bg-warning");
     } else {
+        colLabel = i;
         col.classList.add("bg-secondary");
     }
 
+    //Aggiungo altre classi a col
+    col.classList.add("col-4", "col-sm-3", "col-md-2", "me-3", "ms-3", "single-col", "rounded-4", "d-flex", "justify-content-center", "align-items-center", "shadow", "fs-3", "fw-bold");
+
+    //Aggiungo gli elementi al dom
     col.append(colLabel);
     row.append(col);
 }
