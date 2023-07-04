@@ -1,0 +1,14 @@
+:root {
+    --bs-primary: #083b4c;
+    --bs-primary-rgb: 8, 59, 76;
+    --bs-secondary: #1389b2;
+    --bs-secondary-rgb: 19, 137, 178;
+}
+
+main h1 {
+    font-size: 4rem;
+}
+
+.single-col {
+    aspect-ratio: 1/1;
+}
