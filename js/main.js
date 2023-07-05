@@ -30,15 +30,13 @@ for (let i = 1; i <= 100; i++) {
         colLabel = "Buzz";
         col.classList.add("bg-warning");
     } else {
-        colLabel = i;
+        // Trasformo i in una stringa prima di assegnarlo a colLabel
+        colLabel = i.toString();
         col.classList.add("bg-secondary");
     }
 
     //Aggiungo altre classi a col
     col.classList.add("col-4", "col-sm-3", "col-md-2", "me-3", "ms-3", "single-col", "rounded-4", "d-flex", "justify-content-center", "align-items-center", "shadow", "fs-3", "fw-bold");
-
-    //Nel caso fosse un numero lo trasformo in una stringa
-    colLabel.innerHTML = i.toString();
 
     //Aggiungo gli elementi al dom
     col.append(colLabel);
